@@ -4,6 +4,7 @@
     <TargetFrameworks>net6.0;netstandard2.1</TargetFrameworks>
     <RootNamespace>Treasure.Utils</RootNamespace>
 
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Description>A utility library for dealing with arguments.</Description>
     <PackageTags>arguments utility treasure</PackageTags>
   </PropertyGroup>
