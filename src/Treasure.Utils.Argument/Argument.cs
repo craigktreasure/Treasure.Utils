@@ -9,6 +9,16 @@ using System.Runtime.CompilerServices;
 public static class Argument
 {
     /// <summary>
+    /// Marks the argument as being used.
+    /// This method is useful in situations where you need to implement an API,
+    /// but don't need a specific parameter and a discard won't work to please
+    /// an analyzer.
+    /// </summary>
+    public static void MarkUsed(object? _)
+    {
+    }
+
+    /// <summary>
     /// Asserts the value is not null and returns the value.
     /// </summary>
     /// <typeparam name="T"></typeparam>
