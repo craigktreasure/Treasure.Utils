@@ -3,6 +3,20 @@ namespace Treasure.Utils.Tests;
 public class ArgumentTests
 {
     [Fact]
+    public void MarkUsed()
+    {
+        // Arrange
+        static void Method(string? useMe)
+        {
+            Argument.MarkUsed(useMe);
+        }
+        const string? value = null;
+
+        // Act
+        Method(value);
+    }
+
+    [Fact]
     public void NotNull()
     {
         // Arrange
