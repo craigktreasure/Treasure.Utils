@@ -31,7 +31,7 @@
     <GlobalPackageReference Include="Microsoft.NET.Test.Sdk"            Version="17.2.0"
                       IncludeAssets="all"
                       PrivateAssets="" />
-    <GlobalPackageReference Include="xunit"                             Version="2.4.2-pre.12"
+    <GlobalPackageReference Include="xunit"                             Version="2.4.2"
                       IncludeAssets="all"
                       PrivateAssets="" />
     <GlobalPackageReference Include="xunit.runner.visualstudio"         Version="2.4.5"
