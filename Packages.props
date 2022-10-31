@@ -25,7 +25,7 @@
     <!-- Global test dependencies:
       https://github.com/microsoft/MSBuildSdks/tree/main/src/CentralPackageVersions#global-package-references
     -->
-    <GlobalPackageReference Include="coverlet.collector"                Version="3.1.2"
+    <GlobalPackageReference Include="coverlet.collector"                Version="3.2.0"
                       IncludeAssets="runtime; build; native; contentfiles; analyzers; buildtransitive"
                       PrivateAssets="all" />
     <GlobalPackageReference Include="Microsoft.NET.Test.Sdk"            Version="17.3.2"
