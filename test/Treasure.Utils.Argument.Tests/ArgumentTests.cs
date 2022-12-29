@@ -1,4 +1,4 @@
-namespace Treasure.Utils.Tests;
+﻿namespace Treasure.Utils.Tests;
 
 public class ArgumentTests
 {
