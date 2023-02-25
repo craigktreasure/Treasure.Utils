@@ -25,7 +25,7 @@ public static class Argument
     /// <param name="value">The value.</param>
     /// <param name="name">The argument name.</param>
     /// <returns>The value if not null.</returns>
-    public static T NotNull<T>([NotNull] T? value, [CallerArgumentExpression("value")] string name = "") where T : class
+    public static T NotNull<T>([NotNull] T? value, [CallerArgumentExpression(nameof(value))] string name = "") where T : class
     {
         if (value is null)
         {
@@ -41,7 +41,7 @@ public static class Argument
     /// <param name="value">The value.</param>
     /// <param name="name">The argument name.</param>
     /// <returns><see cref="string"/>.</returns>
-    public static string NotNullOrEmpty([NotNull] string? value, [CallerArgumentExpression("value")] string name = "")
+    public static string NotNullOrEmpty([NotNull] string? value, [CallerArgumentExpression(nameof(value))] string name = "")
     {
         if (value is null)
         {
@@ -62,7 +62,7 @@ public static class Argument
     /// <param name="value">The value.</param>
     /// <param name="name">The argument name.</param>
     /// <returns><see cref="string"/>.</returns>
-    public static string NotNullOrWhiteSpace([NotNull] string? value, [CallerArgumentExpression("value")] string name = "")
+    public static string NotNullOrWhiteSpace([NotNull] string? value, [CallerArgumentExpression(nameof(value))] string name = "")
     {
         if (value is null)
         {
