@@ -6,6 +6,11 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Treasure.Utils.Argument", "src\Treasure.Utils.Argument\Treasure.Utils.Argument.csproj", "{5F893AFE-E9C3-47AF-A872-95D1A9CD75FC}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{B012001D-4B86-460D-A3E1-FC3EEC840D13}"
+	ProjectSection(SolutionItems) = preProject
+		test\.editorconfig = test\.editorconfig
+		test\Directory.Build.props = test\Directory.Build.props
+		test\Directory.Packages.props = test\Directory.Packages.props
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Treasure.Utils.Argument.Tests", "test\Treasure.Utils.Argument.Tests\Treasure.Utils.Argument.Tests.csproj", "{EF141707-718F-49EC-99B9-8D7B59CBCCEF}"
 EndProject
