@@ -3,11 +3,32 @@
 using System.Diagnostics.CodeAnalysis;
 using System.Runtime.CompilerServices;
 
+using Treasure.Utils.Extensions;
+
 /// <summary>
 /// A class containing various utilities useful for working with arguments.
 /// </summary>
 public static class Argument
 {
+    /// <summary>
+    /// Asserts the enumeration value is defined and returns the value.
+    /// Flag enumeration values are not asserted.
+    /// </summary>
+    /// <typeparam name="TEnum">The type of the enumeration.</typeparam>
+    /// <param name="value">The value.</param>
+    /// <param name="name">The argument name.</param>
+    /// <returns>The value.</returns>
+    public static TEnum IsDefined<TEnum>(TEnum value, [CallerArgumentExpression(nameof(value))] string name = "")
+        where TEnum : Enum
+    {
+        if (!value.IsFlagsEnum() && !value.IsDefined())
+        {
+            throw new ArgumentException($"The enumeration value is not defined: {value}.", name);
+        }
+
+        return value;
+    }
+
     /// <summary>
     /// Marks the argument as being used.
     /// This method is useful in situations where you need to implement an API,

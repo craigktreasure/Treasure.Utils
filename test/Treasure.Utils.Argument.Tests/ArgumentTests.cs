@@ -3,6 +3,36 @@
 public class ArgumentTests
 {
     [Fact]
+    public void IsDefined_FlagsEnum()
+    {
+        // Arrange
+        TestFlagsEnum value = TestFlagsEnum.One | TestFlagsEnum.Two;
+
+        // Act
+        Argument.IsDefined(value);
+        Argument.IsDefined(value);
+    }
+
+    [Fact]
+    public void IsDefined_StandardEnum()
+    {
+        // Arrange
+        TestStandardEnum value = TestStandardEnum.Value;
+
+        // Act
+        Argument.IsDefined(value);
+    }
+    [Fact]
+    public void IsDefined_StandardEnum_InvalidEnumThrows()
+    {
+        // Arrange
+        TestStandardEnum value = (TestStandardEnum)(-1);
+
+        // Act
+        Assert.Throws<ArgumentException>(nameof(value), () => Argument.IsDefined(value));
+    }
+
+    [Fact]
     public void MarkUsed()
     {
         // Arrange
@@ -83,5 +113,20 @@ public class ArgumentTests
 
         // Act and assert
         Assert.Throws<ArgumentNullException>(nameof(objectValue), () => Argument.NotNull(objectValue));
+    }
+
+    [Flags]
+    private enum TestFlagsEnum : short
+    {
+        None = 0,
+        One = 1,
+        Two = 2,
+        Four = 4,
+        Eight = 8
+    };
+
+    private enum TestStandardEnum : short
+    {
+        Value,
     }
 }
