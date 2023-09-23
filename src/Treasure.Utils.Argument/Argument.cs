@@ -25,6 +25,7 @@ public static class Argument
     /// <param name="value">The value.</param>
     /// <param name="name">The argument name.</param>
     /// <returns>The value if not null.</returns>
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static T NotNull<T>([NotNull] T? value, [CallerArgumentExpression(nameof(value))] string name = "") where T : class
     {
 #if NET6_0_OR_GREATER
@@ -45,6 +46,7 @@ public static class Argument
     /// <param name="value">The value.</param>
     /// <param name="name">The argument name.</param>
     /// <returns><see cref="string"/>.</returns>
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static string NotNullOrEmpty([NotNull] string? value, [CallerArgumentExpression(nameof(value))] string name = "")
     {
 #if NET7_0_OR_GREATER
@@ -70,6 +72,7 @@ public static class Argument
     /// <param name="value">The value.</param>
     /// <param name="name">The argument name.</param>
     /// <returns><see cref="string"/>.</returns>
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static string NotNullOrWhiteSpace([NotNull] string? value, [CallerArgumentExpression(nameof(value))] string name = "")
     {
         if (value is null)
