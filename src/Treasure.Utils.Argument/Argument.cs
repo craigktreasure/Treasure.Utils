@@ -25,12 +25,17 @@ public static class Argument
     /// <param name="value">The value.</param>
     /// <param name="name">The argument name.</param>
     /// <returns>The value if not null.</returns>
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static T NotNull<T>([NotNull] T? value, [CallerArgumentExpression(nameof(value))] string name = "") where T : class
     {
+#if NET6_0_OR_GREATER
+        ArgumentNullException.ThrowIfNull(value, name);
+#else
         if (value is null)
         {
             throw new ArgumentNullException(name);
         }
+#endif
 
         return value;
     }
@@ -41,8 +46,12 @@ public static class Argument
     /// <param name="value">The value.</param>
     /// <param name="name">The argument name.</param>
     /// <returns><see cref="string"/>.</returns>
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static string NotNullOrEmpty([NotNull] string? value, [CallerArgumentExpression(nameof(value))] string name = "")
     {
+#if NET7_0_OR_GREATER
+        ArgumentException.ThrowIfNullOrEmpty(value, name);
+#else
         if (value is null)
         {
             throw new ArgumentNullException(name);
@@ -52,6 +61,7 @@ public static class Argument
         {
             throw new ArgumentException("The value cannot be null or empty.", name);
         }
+#endif
 
         return value;
     }
@@ -62,6 +72,7 @@ public static class Argument
     /// <param name="value">The value.</param>
     /// <param name="name">The argument name.</param>
     /// <returns><see cref="string"/>.</returns>
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static string NotNullOrWhiteSpace([NotNull] string? value, [CallerArgumentExpression(nameof(value))] string name = "")
     {
         if (value is null)
