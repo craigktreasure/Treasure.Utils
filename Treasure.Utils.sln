@@ -28,6 +28,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{FDF5F72E
 		build\Defaults.targets = build\Defaults.targets
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Treasure.Utils.Argument.Benchmarks", "test\Treasure.Utils.Argument.Benchmarks\Treasure.Utils.Argument.Benchmarks.csproj", "{AB3B36BF-791F-4DC2-8B53-4BA812A80E86}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -42,6 +44,10 @@ Global
 		{EF141707-718F-49EC-99B9-8D7B59CBCCEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EF141707-718F-49EC-99B9-8D7B59CBCCEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EF141707-718F-49EC-99B9-8D7B59CBCCEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB3B36BF-791F-4DC2-8B53-4BA812A80E86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB3B36BF-791F-4DC2-8B53-4BA812A80E86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB3B36BF-791F-4DC2-8B53-4BA812A80E86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB3B36BF-791F-4DC2-8B53-4BA812A80E86}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -49,6 +55,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{EF141707-718F-49EC-99B9-8D7B59CBCCEF} = {B012001D-4B86-460D-A3E1-FC3EEC840D13}
 		{FDF5F72E-0C98-4976-8125-12C0ED9F89B4} = {A18B8F8E-8296-4968-A569-16F3F4FE045E}
+		{AB3B36BF-791F-4DC2-8B53-4BA812A80E86} = {B012001D-4B86-460D-A3E1-FC3EEC840D13}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1304A800-AFA8-4EDF-9EBC-06F8680BADF1}
