@@ -14,7 +14,6 @@ updates:
     - craigktreasure
   groups:
     xunit:
-      dependency-type: "development"
       patterns:
       - "xunit*"
 
