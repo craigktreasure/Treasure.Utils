@@ -15,20 +15,26 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.gitattributes = .gitattributes
 		.gitignore = .gitignore
 		Directory.Build.props = Directory.Build.props
-		Directory.Build.targets = Directory.Build.targets
+		Directory.Build.rsp = Directory.Build.rsp
+		Directory.Packages.props = Directory.Packages.props
 		global.json = global.json
 		nuget.config = nuget.config
-		Packages.props = Packages.props
 		version.json = version.json
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{FDF5F72E-0C98-4976-8125-12C0ED9F89B4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Treasure.Utils.Argument.Benchmarks", "test\Treasure.Utils.Argument.Benchmarks\Treasure.Utils.Argument.Benchmarks.csproj", "{AB3B36BF-791F-4DC2-8B53-4BA812A80E86}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{7C628D75-6B6A-4D42-A4D9-45C6ACA51FB5}"
 	ProjectSection(SolutionItems) = preProject
-		build\Defaults.props = build\Defaults.props
-		build\Defaults.targets = build\Defaults.targets
+		src\Directory.Packages.props = src\Directory.Packages.props
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Treasure.Utils.Argument.Benchmarks", "test\Treasure.Utils.Argument.Benchmarks\Treasure.Utils.Argument.Benchmarks.csproj", "{AB3B36BF-791F-4DC2-8B53-4BA812A80E86}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{61D20241-7C98-4A60-AA8D-C7614B7D6768}"
+	ProjectSection(SolutionItems) = preProject
+		test\.editorconfig = test\.editorconfig
+		test\Directory.Build.props = test\Directory.Build.props
+		test\Directory.Packages.props = test\Directory.Packages.props
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -54,8 +60,9 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{EF141707-718F-49EC-99B9-8D7B59CBCCEF} = {B012001D-4B86-460D-A3E1-FC3EEC840D13}
-		{FDF5F72E-0C98-4976-8125-12C0ED9F89B4} = {A18B8F8E-8296-4968-A569-16F3F4FE045E}
 		{AB3B36BF-791F-4DC2-8B53-4BA812A80E86} = {B012001D-4B86-460D-A3E1-FC3EEC840D13}
+		{7C628D75-6B6A-4D42-A4D9-45C6ACA51FB5} = {A18B8F8E-8296-4968-A569-16F3F4FE045E}
+		{61D20241-7C98-4A60-AA8D-C7614B7D6768} = {A18B8F8E-8296-4968-A569-16F3F4FE045E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1304A800-AFA8-4EDF-9EBC-06F8680BADF1}
