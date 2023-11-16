@@ -2,6 +2,7 @@
 
   <PropertyGroup>
     <TargetFrameworks>net6.0;net7.0</TargetFrameworks>
+    <TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('Windows'))">$(TargetFrameworks);$(DefaultNetStandardTestTFM)</TargetFrameworks>
     <RootNamespace>Treasure.Utils.Tests</RootNamespace>
 
     <IsPackable>false</IsPackable>
@@ -27,6 +28,9 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\src\Treasure.Utils.Argument\Treasure.Utils.Argument.csproj" />
+    <ProjectReference Update="..\..\src\Treasure.Utils.Argument\Treasure.Utils.Argument.csproj"
+                      Condition="$(TargetFramework.Contains($(PlatformTFMSuffix)))"
+                      SetTargetFramework="TargetFramework=netstandard2.1" />
   </ItemGroup>
 
 </Project>

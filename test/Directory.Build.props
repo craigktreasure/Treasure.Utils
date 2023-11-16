@@ -3,5 +3,11 @@
     <IsTestProject>true</IsTestProject>
   </PropertyGroup>
 
+  <PropertyGroup Condition="$([MSBuild]::IsOSPlatform('Windows'))">
+    <!-- Setup TFM properties for testing .NET Standard TFM's on supported platforms. -->
+    <PlatformTFMSuffix Condition="$([MSBuild]::IsOSPlatform('Windows'))">-windows</PlatformTFMSuffix>
+    <DefaultNetStandardTestTFM >net6.0$(PlatformTFMSuffix)</DefaultNetStandardTestTFM>
+  </PropertyGroup>
+
   <Import Project="$(MSBuildThisFileDirectory)/../Directory.Build.props" />
 </Project>
