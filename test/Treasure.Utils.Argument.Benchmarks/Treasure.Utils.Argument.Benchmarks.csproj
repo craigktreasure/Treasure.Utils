@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFrameworks>net7.0;net6.0</TargetFrameworks>
-    <TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('Windows'))">$(TargetFrameworks);net7.0$(PlatformTFMSuffix);net6.0$(PlatformTFMSuffix)</TargetFrameworks>
+    <TargetFrameworks>net8.0;net7.0;net6.0</TargetFrameworks>
+    <TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('Windows'))">$(TargetFrameworks);net8.0$(PlatformTFMSuffix);net7.0$(PlatformTFMSuffix);net6.0$(PlatformTFMSuffix)</TargetFrameworks>
     <RootNamespace>Treasure.Utils.Benchmarks</RootNamespace>
     <IsTestProject>false</IsTestProject>
 
