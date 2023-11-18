@@ -178,6 +178,9 @@ csharp_style_expression_bodied_constructors = when_on_single_line
 #prefer expression-bodied members for properties
 csharp_style_expression_bodied_properties = when_on_single_line
 
+#IDE0290: Use Primary Constructors
+csharp_style_prefer_primary_constructors = false
+
 #Style - expression level options
 
 #prefer out variables to be declared before the method call

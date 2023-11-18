@@ -1,6 +1,6 @@
 ﻿// .\Run.ps1
 // or
-// dotnet run -c Release -f [net6.0 net7.0] --filter "*"
+// dotnet run -c Release -f [net6.0 net7.0 net8.0] --filter "*"
 
 #pragma warning disable CA1050
 #pragma warning disable CA1812

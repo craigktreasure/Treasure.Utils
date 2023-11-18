@@ -20,7 +20,7 @@ public class ArgumentTests
     public void NotNull()
     {
         // Arrange
-        int[] objectValue = Array.Empty<int>();
+        int[] objectValue = [];
 
         // Act and assert
         Argument.NotNull(objectValue);

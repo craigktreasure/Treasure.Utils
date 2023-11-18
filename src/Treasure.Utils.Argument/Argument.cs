@@ -75,6 +75,9 @@ public static class Argument
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static string NotNullOrWhiteSpace([NotNull] string? value, [CallerArgumentExpression(nameof(value))] string name = "")
     {
+#if NET8_0_OR_GREATER
+        ArgumentException.ThrowIfNullOrWhiteSpace(value, name);
+#else
         if (value is null)
         {
             throw new ArgumentNullException(name);
@@ -84,6 +87,7 @@ public static class Argument
         {
             throw new ArgumentException("The value cannot be null, empty, or white-space.", name);
         }
+#endif
 
         return value;
     }
