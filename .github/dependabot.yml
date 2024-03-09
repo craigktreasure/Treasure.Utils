@@ -16,6 +16,9 @@ updates:
     xunit:
       patterns:
       - "xunit*"
+    coverlet:
+      patterns:
+      - "coverlet*"
 
 - package-ecosystem: github-actions
   directory: "/"
