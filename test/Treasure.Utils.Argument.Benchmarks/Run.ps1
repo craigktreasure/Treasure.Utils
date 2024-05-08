@@ -2,7 +2,7 @@
 
 [CmdletBinding()]
 Param (
-    [string[]] $TFMs = @('net6.0', 'net6.0-windows', 'net7.0', 'net7.0-windows', 'net8.0', 'net8.0-windows'),
+    [string[]] $TFMs = @('net6.0', 'net6.0-windows', 'net8.0', 'net8.0-windows'),
     [string] $ArtifactOutputRoot = (Join-Path $PSScriptRoot '..' '..' '__benchmarks'),
     [string] $ResultOutputPath = (Join-Path $PSScriptRoot '..' '..' '__benchmarks' 'results.md')
 )

@@ -2,7 +2,7 @@
 
 [CmdletBinding()]
 Param (
-    [string[]] $TFMs = @('net6.0', 'net6.0-windows', 'net7.0', 'net7.0-windows', 'net8.0', 'net8.0-windows'),
+    [string[]] $TFMs = @('net6.0', 'net6.0-windows', 'net8.0', 'net8.0-windows'),
     [string[]] $Columns = @( 'Runtime', 'TFM', 'LibraryTfm', 'Method', 'Mean', 'Error', 'StdDev', 'Code Size'),
     [string] $ArtifactInputRoot = (Join-Path $PSScriptRoot '..' '..' '__benchmarks'),
     [string] $ResultOutputPath = (Join-Path $PSScriptRoot '..' '..' '__benchmarks' 'results.md'),
@@ -38,10 +38,6 @@ function BuildTableRowFromColumnsAndData ($columns, $data) {
 function GetLibraryTfmName ($tfm) {
     if ($tfm -eq 'net6.0') {
         return 'net6.0'
-    }
-
-    if ($tfm -eq 'net7.0') {
-        return 'net7.0'
     }
 
     if ($tfm -eq 'net8.0') {
