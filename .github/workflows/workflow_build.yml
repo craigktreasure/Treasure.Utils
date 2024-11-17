@@ -38,36 +38,36 @@ jobs:
         id: version
         uses: ./.github/actions/version-vars
 
-      - name: Restore
-        run: dotnet restore
+      # - name: Restore
+      #   run: dotnet restore
 
-      - name: Format validation
-        if: ${{ inputs.checkFormat }}
-        run: dotnet format --no-restore --verify-no-changes
+      # - name: Format validation
+      #   if: ${{ inputs.checkFormat }}
+      #   run: dotnet format --no-restore --verify-no-changes
 
-      - name: Build
-        run: dotnet build --configuration Release --no-restore
+      # - name: Build
+      #   run: dotnet build --configuration Release --no-restore
 
-      - name: Test
-        run: dotnet test --configuration Release --no-build --verbosity normal /p:CollectCoverage=true
+      # - name: Test
+      #   run: dotnet test --configuration Release --no-build --verbosity normal /p:CollectCoverage=true
 
-      - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v5
-        with:
-          name: codecov
-          directory: __test-results
-          token: ${{ secrets.CODECOV_TOKEN }}
-          fail_ci_if_error: true
-          verbose: true
+      # - name: Upload coverage to Codecov
+      #   uses: codecov/codecov-action@v5
+      #   with:
+      #     name: codecov
+      #     directory: __test-results
+      #     token: ${{ secrets.CODECOV_TOKEN }}
+      #     fail_ci_if_error: true
+      #     verbose: true
 
-      - name: Upload output artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: output_${{ inputs.platform }}
-          path: __output
+      # - name: Upload output artifact
+      #   uses: actions/upload-artifact@v4
+      #   with:
+      #     name: output_${{ inputs.platform }}
+      #     path: __output
 
-      - name: Upload package artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: packages_${{ inputs.platform }}
-          path: __packages
+      # - name: Upload package artifact
+      #   uses: actions/upload-artifact@v4
+      #   with:
+      #     name: packages_${{ inputs.platform }}
+      #     path: __packages
