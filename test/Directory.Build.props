@@ -17,12 +17,6 @@
     <CoverletOutputFormat>cobertura</CoverletOutputFormat>
   </PropertyGroup>
 
-  <PropertyGroup Condition="$([MSBuild]::IsOSPlatform('Windows'))">
-    <!-- Setup TFM properties for testing .NET Standard TFM's on supported platforms. -->
-    <PlatformTFMSuffix Condition="$([MSBuild]::IsOSPlatform('Windows'))">-windows</PlatformTFMSuffix>
-    <DefaultNetStandardTestTFM >net8.0$(PlatformTFMSuffix)</DefaultNetStandardTestTFM>
-  </PropertyGroup>
-
   <ItemGroup>
     <!-- Exclude test projects from code coverate reports. -->
     <AssemblyAttribute Include="System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute" />

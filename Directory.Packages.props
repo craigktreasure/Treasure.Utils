@@ -25,12 +25,7 @@
     <GlobalPackageReference Include="Microsoft.Build.CopyOnWrite" Version="1.0.334" />
   </ItemGroup>
 
-  <ItemGroup>
-    <PackageVersion Include="Nullable"                                          Version="1.3.1" />
-  </ItemGroup>
-
   <ItemGroup Label="Test Only Packages" Condition=" '$(TestOnlyPackagesEnabled)' == 'true' ">
-    <PackageVersion Include="BenchmarkDotNet"                                   Version="0.14.0" />
     <PackageVersion Include="coverlet.collector"                                Version="6.0.2" />
     <PackageVersion Include="coverlet.msbuild"                                  Version="6.0.2" />
     <PackageVersion Include="Microsoft.NET.Test.Sdk"                            Version="17.11.1" />

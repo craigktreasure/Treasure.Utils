@@ -1,5 +1,10 @@
 # Treasure.Utils.Argument
 
+> **Important**
+>
+> This package is now deprecated as it isn't necessary in .NET 8+.
+> The source code remains here for reference if necessary.
+
 [![NuGet](https://img.shields.io/nuget/v/Treasure.Utils.Argument)](https://www.nuget.org/packages/Treasure.Utils.Argument/)
 [![NuGet](https://img.shields.io/nuget/dt/Treasure.Utils.Argument)](https://www.nuget.org/packages/Treasure.Utils.Argument/)
 

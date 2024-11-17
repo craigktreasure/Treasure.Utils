@@ -7,6 +7,10 @@ This repository contains some of my common utilities.
 
 ## Treasure.Utils.Argument
 
+> **Important**
+>
+> This package is now deprecated as it isn't necessary in .NET 8+.
+
 [![NuGet](https://img.shields.io/nuget/v/Treasure.Utils.Argument)](https://www.nuget.org/packages/Treasure.Utils.Argument/)
 [![NuGet](https://img.shields.io/nuget/dt/Treasure.Utils.Argument)](https://www.nuget.org/packages/Treasure.Utils.Argument/)
 
